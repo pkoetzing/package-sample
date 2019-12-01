@@ -1,20 +1,38 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Sample Package
+to demonstrate:
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+1. How to structure a Python package
+2. How to use the \_\_init__.py
+3. How to import packages
+4. How to use the setup.py
+5. How to make editable installs
+6. How to use logging
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Program Flow
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+1. script
+2. main_function
+3. function_1
+4. helper
+5. function_2
+6. helper
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Folder Structure
+
+python-package-sample
+- script.py
+- setup.py
+- package
+    - \_\_init__.py
+    - module
+        - main_function( )
+    - subpackage
+        - \_\_init__.py
+        - submodule_1.py
+            - function_1( )
+        - submodule_2.py
+            - function_2( )
+    - helppackage
+        - \_\_init__.py
+        - helpmodule
+            - helper( )
