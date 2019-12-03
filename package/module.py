@@ -7,7 +7,15 @@ logger.info('module code')
 # from pathlib import Path
 # sys.path.insert(0, str(Path(__file__).parents[1]))
 
+# absolute import from repo-folder (PATH)
 from package.subpackage import submodule_1, submodule_2
+
+# alternate relative import:
+# from .subpackage import submodule_1, submodule_2
+# relative imports use the __name__ variable to determine
+# the target modules position, and __name__ must have at least as many
+# dots as you're trying to use in the import statement. Hence relative
+# imports don't work in the top-level-script.
 
 
 def main_function():
