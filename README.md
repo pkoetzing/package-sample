@@ -54,3 +54,11 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 9. Run the main module in script-mode again
 10. Add ```logging.basicConfig(level=0)``` to the top of
     the module code and run the module again.
+
+## Take-aways
+
+1. To import a module it's containing folder has to be either on the PATH 
+or pip-installed (linked) into the Lib/site-packages.
+2. Prefer absolute imports starting with the main package over relative imports.
+3. The \_\_init__.py can be used for convenience imports.
+4. Don't put `logging.basicConfig()` into the module code.
