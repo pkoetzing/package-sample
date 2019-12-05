@@ -25,7 +25,7 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
     - setup.py
     - package
         - \_\_init__.py
-        - module
+        - module.py
             - main_function( )
         - subpackage
             - \_\_init__.py
