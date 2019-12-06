@@ -3,11 +3,11 @@
 
 https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
-1. How to structure your package
+1. How to structure your project/package
 2. How to make use of the \_\_init__.py
-3. How to find and import your modules
+3. How Python finds and imports your modules
 4. How **editable** installs will help you
-5. Where to configure logging
+5. How to configure logging
 
 ## Sample Program Flow
 
@@ -57,8 +57,9 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
 ## Take-aways
 
-1. To import a module it's containing folder has to be either on the PATH 
-or pip-installed (linked) into the Lib/site-packages.
-2. Prefer absolute imports starting with the main package over relative imports.
+1. To import a module it's containing folder has to be either 
+pip-installed (linked) into the Lib/site-packages or on the SYSTEM-PATH. 
+2. Prefer _absolute imports_ starting with the main package over _relative imports_.
 3. The \_\_init__.py can be used for convenience imports.
-4. Don't put `logging.basicConfig()` into the module code.
+4. Don't put `logging.basicConfig()` into the module code since it is
+executed once only.
