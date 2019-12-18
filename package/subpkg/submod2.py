@@ -3,9 +3,9 @@ logger = logging.getLogger(__name__)
 
 logger.info('module code')
 
-from package.helppackage.helpmodule import helper
+from package import helper
 
 
-def function_1():
+def func2():
     logger.info('function code')
     helper()

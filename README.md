@@ -1,13 +1,14 @@
 
-# How to work with own Python packages
+# How to work with Python packages
 
 https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
 1. How to structure your project/package
 2. How to make use of the \_\_init__.py
 3. How Python finds and imports your modules
-4. How **editable** installs will help you
-5. How to configure logging
+4. The difference between absolute and relative imports
+5. How **editable** installs will help you
+6. How to configure logging
 
 ## Sample Program Flow
 
@@ -42,17 +43,18 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
 1. Clone the repository
 2. Run script.py step-by-step in the debugger
-3. Observe the different logs from code declaration and code execution
-4. Compare the 2 methods of calling _helper_ in function_1 and function_2
-5. Try to run the main module in script-mode
-6. Check the first PATH element in the debugger with  
+3. Try out different imports
+4. Observe the logs from code declaration and code execution
+5. Compare the 2 methods of calling _helper_ in function_1 and function_2
+6. Try to run the main module in script-mode
+7. Check the first PATH element in the debugger with  
 ```import sys; sys.path[0]```
-7. Make an editable install when you are inside the repo-folder with  
+8. Make an editable install when you are inside the repo-folder with  
 ```pip install -e .```
-8. Check the installation with  
+9. Check the installation with  
 ```pip show package-sample```
-9. Run the main module in script-mode again
-10. Add ```logging.basicConfig(level=0)``` to the top of
+10. Run the main module in script-mode again
+11. Add ```logging.basicConfig(level=0)``` to the top of
     the module code and run the module again.
 
 ## Take-aways

@@ -8,29 +8,33 @@ logger.info('module code')
 # sys.path.insert(0, str(Path(__file__).parents[1]))
 
 # absolute import from repo-folder (PATH)
-from package.subpackage import submodule_1, submodule_2
+from package.subpkg import submod1, submod2
 
 # alternate relative import:
-# from .subpackage import submodule_1, submodule_2
+# from .subpkg import submod1, submod2
 # relative imports use the __name__ variable to determine
-# the target modules position, and __name__ must have at least as many
-# dots as you're trying to use in the import statement. Hence relative
-# imports don't work in the top-level-script.
+# the target modules position, and __name__ must have
+# at least as many dots as you're trying to use in the
+# import statement. Hence relative imports don't work
+# in the top-level-script.
 
 
-def main_function():
+def main():
+    print('------------------------+-------------'
+          '+----------+----------------')
     logger.info('function code')
-    submodule_1.function_1()
-    submodule_2.function_2()
+    submod1.func1()
+    submod2.func2()
 
 
 if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
-        format='%(name)-30s : %(filename)-14s : %(funcName)-13s : %(message)s')
-    print('\nNAME                           : FILE           '
-          ': FUNCTION      : MESSAGE         \n'
-          '-------------------------------+----------------'
-          '+---------------+-----------------')
-    logger.info('top-level script')
-    main_function()
+        format='%(name)-23s : %(filename)-11s : '
+            '%(funcName)-8s : %(message)s')
+    print('\nNAME                    : FILE        '
+        ': FUNCTION : MESSAGE\n'
+        '------------------------+-------------'
+        '+----------+---------------')
+    logger.info('top-level')
+    main()
