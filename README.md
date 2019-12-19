@@ -13,10 +13,10 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 ## Sample Program Flow
 
 1. script
-2. main_function
-3. function_1
+2. main
+3. func1
 4. helper
-5. function_2
+5. func2
 6. helper
 
 ## Sample Folder Structure
@@ -27,25 +27,25 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
     - package
         - \_\_init__.py
         - module.py
-            - main_function( )
-        - subpackage
+            - main( )
+        - subpkg
             - \_\_init__.py
-            - submodule_1.py
-                - function_1( )
-            - submodule_2.py
-                - function_2( )
-        - helppackage
+            - submod1.py
+                - func1( )
+            - submod2.py
+                - func2( )
+        - helppkg
             - \_\_init__.py
-            - helpmodule
+            - helpmod
                 - helper( )
 
 ## What to do
 
-1. Clone the repository
+1. Clone the repository and explare structure and files
 2. Run script.py step-by-step in the debugger
-3. Try out different imports
-4. Observe the logs from code declaration and code execution
-5. Compare the 2 methods of calling _helper_ in function_1 and function_2
+3. Compare the 2 methods of calling _helper_ in func1 and func2
+4. Try out the different ways to import the package
+5. Observe the logs from code declaration and code execution
 6. Try to run the main module in script-mode
 7. Check the first PATH element in the debugger with  
 ```import sys; sys.path[0]```
