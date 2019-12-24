@@ -39,12 +39,34 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
             - helpmod
                 - helper( )
 
+## Absolute Imports (from anywhere)
+
+1. import package.subpkg.submod1.func1  
+   y = package.subpkg.submod1.func1()  
+
+2. import package.subpkg.submod1.func1 as func1  
+   y = func1()
+
+3. from package.subpkg.submod1 import func1  
+   y = func1()
+
+4. from package.subpkg import submod1  
+   y = submod1.func1()
+
+## Relative Imports (not from \_\_main__)
+
+1. In module.py: from .subpkg.submod1 import func1
+
+2. In submod1.py: from .submod2 import func2
+
+2. In submod1.py: from ..helppkg.helpmod import helper
+
 ## What to do
 
 1. Clone the repository and explare structure and files
 2. Run script.py step-by-step in the debugger
-3. Compare the 2 methods of calling _helper_ in func1 and func2
-4. Try out the different ways to import the package
+3. Try out the different ways to import the package
+4. Compare the 2 methods of calling _helper_ in func1 and func2
 5. Observe the logs from code declaration and code execution
 6. Try to run the main module in script-mode
 7. Check the first PATH element in the debugger with  
