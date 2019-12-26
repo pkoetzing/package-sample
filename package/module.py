@@ -12,6 +12,7 @@ from package.subpkg import submod1, submod2
 
 # alternate relative import:
 # from .subpkg import submod1, submod2
+
 # relative imports use the __name__ variable to determine
 # the target modules position, and __name__ must have
 # at least as many dots as you're trying to use in the
@@ -19,7 +20,7 @@ from package.subpkg import submod1, submod2
 # in the top-level-script.
 
 
-def main():
+def function():
     print('------------------------+-------------'
           '+----------+----------------')
     logger.info('function code')
@@ -28,6 +29,13 @@ def main():
 
 
 if __name__ == "__main__":
+    # Use this main clause for code debugging (explorative testing)
+    # during function development. Note that Python doesn't require a
+    # main() function like Java or C and that in Python a function name
+    # should be descriptive - which makes main() a rather bad choice.
+
+    # Don't configure the root logger in module code,
+    # since it can only be done once in a Python program!
     logging.basicConfig(
         level=logging.INFO,
         format='%(name)-23s : %(filename)-11s : '
@@ -37,4 +45,4 @@ if __name__ == "__main__":
         '------------------------+-------------'
         '+----------+---------------')
     logger.info('top-level')
-    main()
+    function()

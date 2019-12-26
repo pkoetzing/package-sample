@@ -103,7 +103,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-python-package-sample.code-workspace
+*.code-workspace
 .vscode
 
 Pipfile

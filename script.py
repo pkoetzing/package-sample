@@ -25,18 +25,18 @@ diff = lambda x: sorted(
 # import package
 # logger.info(f'local scope: {diff(dir())}')
 # logger.info(f'package scope: {diff(dir(package))}')
-# package.module.main()
+# package.module.function()
 
 import package.module
 logger.info(f'local scope >\n\t{diff(dir())}')
 logger.info(f'package scope >\n\t{diff(dir(package))}')
-package.module.main()
+package.module.function()
 
 # from package import module
 # logger.info(f'local scope: {diff(dir())}')
 # logger.info(f'module scope: {diff(dir(module))}')
-# module.main()
+# module.function()
 
-# from package.module import main_function
+# from package.module import function
 # logger.info(f'local scope: {diff(dir())}')
-# main()
+# function()
