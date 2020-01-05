@@ -3,9 +3,9 @@
 
 1. How to structure your project
 2. How Python finds and imports your modules
-3. How **editable** installs will help you
-4. The difference between absolute and relative imports
-5. How to make use of the \_\_init__.py
+3. How **editable installs** will help you
+4. The difference between **absolute** and **relative** imports
+5. How to make use of the **\_\_init__.py**
 6. How to configure logging  
 <br/>
 
@@ -31,18 +31,20 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
         - module.py
             - function( )
         - subpkg
-            - \_\_init__.py
             - submod1.py
                 - func1( )
             - submod2.py
                 - func2( )
         - helppkg
-            - \_\_init__.py
             - helpmod
                 - helper( )  
 <br/>
 
 ---
+
+## Import tempplate
+
+**FROM** \<package>\<module> **IMPORT** \<package>\<module>\<function> **AS** \<alias>
 
 ## Absolute Imports (from anywhere)
 
@@ -90,8 +92,10 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
 ## Take-aways
 
-1. To import a module it's containing folder has to be either 
-pip-installed (linked) into the Lib/site-packages or on the SYSTEM-PATH. 
+1. To import a module it's containing folder has to on sys.path, which includes:
+    1. The top-level script folder
+    2. Lib/site-packages (```pip install --editable```)
+    3. PYTHONPATH
 2. Prefer _absolute imports_ starting with the main package over _relative imports_.
 3. The \_\_init__.py can be used for convenience imports.
 4. Don't put `logging.basicConfig()` into the module code since it is

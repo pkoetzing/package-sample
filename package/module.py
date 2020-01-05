@@ -1,13 +1,13 @@
 import logging
 logger = logging.getLogger(__name__)
 
-logger.info('module code')
+logger.info('')
 
 # import sys
 # from pathlib import Path
 # sys.path.insert(0, str(Path(__file__).parents[1]))
 
-# absolute import from repo-folder (PATH)
+# absolute import from repo-folder
 from package.subpkg import submod1, submod2
 
 # alternate relative import:
@@ -21,9 +21,7 @@ from package.subpkg import submod1, submod2
 
 
 def function():
-    print('------------------------+-------------'
-          '+----------+----------------')
-    logger.info('function code')
+    logger.info('')
     submod1.func1()
     submod2.func2()
 
@@ -38,11 +36,7 @@ if __name__ == "__main__":
     # since it can only be done once in a Python program!
     logging.basicConfig(
         level=logging.INFO,
-        format='%(name)-23s : %(filename)-11s : '
-            '%(funcName)-8s : %(message)s')
-    print('\nNAME                    : FILE        '
-        ': FUNCTION : MESSAGE\n'
-        '------------------------+-------------'
-        '+----------+---------------')
-    logger.info('top-level')
+        format='%(name)-23s [%(filename)-11s] %(funcName)s')
+
+    logger.info('')
     function()

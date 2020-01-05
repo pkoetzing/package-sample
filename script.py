@@ -4,39 +4,20 @@ logger = logging.getLogger(__name__)
 
 logging.basicConfig(
     level=logging.INFO,
-    format='%(name)-23s : %(filename)-11s : '
-           '%(funcName)-8s : %(message)s')
-print('\nNAME                    : FILE        '
-      ': FUNCTION : MESSAGE\n'
-      '------------------------+-------------'
-      '+----------+----------------')
-logger.info('top-level')
+    format='%(name)-23s [%(filename)-11s] %(funcName)s')
 
-
-# Track changes in namespace
-SCOPE = dir()
-diff = lambda x: sorted(
-    list(set(x) - set(SCOPE)
-         - set(['SCOPE', 'diff', '__path__'])))
-
+logger.info('')
 
 # Different ways to import and call the main function
 
-# import package
-# logger.info(f'local scope: {diff(dir())}')
-# logger.info(f'package scope: {diff(dir(package))}')
-# package.module.function()
-
-import package.module
-logger.info(f'local scope >\n\t{diff(dir())}')
-logger.info(f'package scope >\n\t{diff(dir(package))}')
+import package
 package.module.function()
 
+# import package.module
+# package.module.function()
+
 # from package import module
-# logger.info(f'local scope: {diff(dir())}')
-# logger.info(f'module scope: {diff(dir(module))}')
 # module.function()
 
 # from package.module import function
-# logger.info(f'local scope: {diff(dir())}')
 # function()
