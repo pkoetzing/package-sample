@@ -1,8 +1,8 @@
 import logging
 logger = logging.getLogger(__name__)
 
-logger.info('module code')
+logger.info('')
 
 
 def helper():
-    logger.info(f'module code')
+    logger.info('')

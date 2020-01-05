@@ -1,7 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 
-logger.info('init code')
+logger.info('')
 
 # convenience import:
 from package.helppkg.helpmod import helper

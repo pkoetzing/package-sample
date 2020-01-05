@@ -1,11 +1,11 @@
 import logging
 logger = logging.getLogger(__name__)
 
-logger.info('module code')
+logger.info('')
 
 from package import helper
 
 
 def func2():
-    logger.info('function code')
+    logger.info('')
     helper()

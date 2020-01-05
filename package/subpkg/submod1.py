@@ -1,7 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 
-logger.info('module code')
+logger.info('')
 
 # absolute import:
 # from package.helppkg.helpmod import helper
@@ -11,5 +11,5 @@ from ..helppkg.helpmod import helper
 
 
 def func1():
-    logger.info('function code')
+    logger.info('')
     helper()
