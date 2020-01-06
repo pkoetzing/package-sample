@@ -1,6 +1,5 @@
 import logging
 logger = logging.getLogger(__name__)
-
 logger.info('')
 
 # import sys
@@ -37,6 +36,6 @@ if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         format='%(name)-23s [%(filename)-11s] %(funcName)s')
-
     logger.info('')
+
     function()

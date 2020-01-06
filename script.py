@@ -1,4 +1,4 @@
-# Setup logging
+# 1. Setup logging
 import logging
 logger = logging.getLogger(__name__)
 
@@ -8,16 +8,8 @@ logging.basicConfig(
 
 logger.info('')
 
-# Different ways to import and call the main function
+# 2. Imports and declarations
+from package.module import function
 
-import package
-package.module.function()
-
-# import package.module
-# package.module.function()
-
-# from package import module
-# module.function()
-
-# from package.module import function
-# function()
+# 3. Code execution
+function()

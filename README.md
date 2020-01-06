@@ -1,12 +1,11 @@
 
 # How to work with Python packages
 
-1. How to structure your project
-2. How Python finds and imports your modules
+1. How to **structure** your project
+2. How Python **finds** and **imports** your modules
 3. How **editable installs** will help you
 4. The difference between **absolute** and **relative** imports
 5. How to make use of the **\_\_init__.py**
-6. How to configure logging  
 <br/>
 
 ---
@@ -20,6 +19,9 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 4. helper
 5. func2
 6. helper
+<br/>
+
+---
 
 ## Sample Folder Structure
 
@@ -42,7 +44,7 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 
 ---
 
-## Import tempplate
+## Import template
 
 **FROM** \<package>\<module> **IMPORT** \<package>\<module>\<function> **AS** \<alias>
 
@@ -87,16 +89,13 @@ https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
 9. Check the installation with  
 ```pip show package-sample```.
 10. Run the main module in script-mode again.
-11. Add ```logging.basicConfig(level=0)``` to the top of
-    the module code and run the module again.
+
 
 ## Take-aways
 
 1. To import a module it's containing folder has to on sys.path, which includes:
     1. The top-level script folder
-    2. Lib/site-packages (```pip install --editable```)
-    3. PYTHONPATH
+    2. PYTHONPATH
+    3. Lib/site-packages (```pip install --editable```)    
 2. Prefer _absolute imports_ starting with the main package over _relative imports_.
 3. The \_\_init__.py can be used for convenience imports.
-4. Don't put `logging.basicConfig()` into the module code since it is
-executed once only.
