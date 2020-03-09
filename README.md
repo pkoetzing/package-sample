@@ -10,8 +10,7 @@
 
 ---
 
-## Sample Program Flow  
-https://vf-commonit.visualstudio.com/VDP-BAM-Training/_git/python-package-sample
+## Sample Program Flow
 
 1. script
 2. function
