@@ -1,4 +1,5 @@
 name: null
 dependencies:
   - pip
+  - pip:
     - --editable .

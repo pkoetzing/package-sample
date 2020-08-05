@@ -8,7 +8,6 @@
 3. How **editable installs** will help you
 4. The difference between **absolute** and **relative** imports
 5. How to make use of the **\_\_init__.py**
-<br/>
 
 ---
 
@@ -20,28 +19,26 @@
 4. helper
 5. func2
 6. helper
-<br/>
 
 ---
 
 ## Sample Folder Structure
 
 - repo-folder
-    - script.py
-    - setup.py
-    - package
-        - \_\_init__.py
-        - module.py
-            - function( )
-        - subpkg
-            - submod1.py
-                - func1( )
-            - submod2.py
-                - func2( )
-        - helppkg
-            - helpmod
-                - helper( )  
-<br/>
+  - script.py
+  - setup.py
+  - package
+    - \_\_init__.py
+    - module.py
+      - function( )
+    - subpkg
+      - submod1.py
+        - func1( )
+        - submod2.py
+          - func2( )
+    - helppkg
+      - helpmod
+        - helper( )  
 
 ---
 
@@ -54,24 +51,22 @@
 1. **import** package.subpkg.submod1.func1  
    y = package.subpkg.submod1.func1()  
 
-2. **import** package.subpkg.submod1.func1 **as** func1  
+1. **import** package.subpkg.submod1.func1 **as** func1  
    y = func1()
 
-3. **from** package.subpkg.submod1 **import** func1  
+1. **from** package.subpkg.submod1 **import** func1  
    y = func1()
 
-4. **from** package.subpkg **import** submod1 **as** s1  
+1. **from** package.subpkg **import** submod1 **as** s1  
    y = s1.func1()
 
 ## Relative Imports (not from *\_\_main__*)
 
-5. In module.py: **from** .subpkg.submod1 **import** func1
+1. In module.py: **from** .subpkg.submod1 **import** func1
 
-6. In submod1.py: **from** .submod2 **import** func2
+1. In submod1.py: **from** .submod2 **import** func2
 
-7. In submod1.py: **from** ..helppkg.helpmod **import** helper
-
-<br/>
+1. In submod1.py: **from** ..helppkg.helpmod **import** helper
 
 ---
 
@@ -86,17 +81,17 @@
 7. Check the first PATH element in the debugger with  
 ```import sys; sys.path[0]```.
 8. Make an editable install when you are inside the repo-folder with  
-```pip install -e .```.
+```pip install -e .```.  
+(```conda develop .``` does a similar thing)
 9. Check the installation with  
 ```pip show package-sample```.
 10. Run the main module in script-mode again.
-
 
 ## Take-aways
 
 1. To import a module it's containing folder has to on sys.path, which includes:
     1. The top-level script folder
     2. PYTHONPATH
-    3. Lib/site-packages (```pip install --editable```)    
+    3. Lib/site-packages (```pip install --editable```)
 2. Prefer _absolute imports_ starting with the main package over _relative imports_.
 3. The \_\_init__.py can be used for convenience imports.
