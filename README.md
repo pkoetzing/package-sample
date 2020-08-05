@@ -1,6 +1,8 @@
 
 # How to work with Python packages
 
+[Video-Stream](https://web.microsoftstream.com/video/24365309-1605-47ef-a9ad-0e76630295cd)
+
 1. How to **structure** your project
 2. How Python **finds** and **imports** your modules
 3. How **editable installs** will help you
